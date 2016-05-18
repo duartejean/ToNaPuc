@@ -9,7 +9,6 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
-import android.widget.Toast;
 
 /**
  * Criado por Jean Duarte em 16/05/2016.
@@ -53,8 +52,7 @@ public class GPSTracker extends Service implements LocationListener {
             // Busca o status do GPS
             isGPSEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
 
-            if (!isGPSEnabled) {
-            } else {
+            if (isGPSEnabled) {
                 this.canGetLocation = true;
                 // Se o GPS estiver ativo, busca a latitude/longitude com base nos serviços de GPS
                 if (location == null) {
