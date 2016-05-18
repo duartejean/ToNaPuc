@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
     // Constantes com as coordenadas a PUC Minas em Betim
@@ -59,6 +60,7 @@ public class MainActivity extends Activity {
         } else {
             lblStatus.setText(String.format("%s", "Você está na PUC Minas em Betim, seja muito bem-vindo(a)!"));
         }
+        Local = null;
     }
 
     /**
@@ -87,12 +89,13 @@ public class MainActivity extends Activity {
      * @return String com a distância formatada em KM ou Metros
      */
     private String EscreveDistancia(double distancia) {
+        Toast.makeText(this, "" + distancia, Toast.LENGTH_SHORT).show();
+        String[] arrayDistancia = Double.toString(distancia).split("\\.");
+
         if (distancia < 500) {
-            return String.format("%s metros", (int) distancia);
+            return String.format("%s metros", arrayDistancia[0]);
         } else {
-            double KM = (int) (distancia / 1000);
-            //double M = distancia - KM;
-            return String.format("%s Km", KM);
+            return String.format("%s,%s Km", String.valueOf((int) (Double.valueOf(arrayDistancia[0]) / 1000)).split("\\.")[0], String.valueOf((int) (Double.valueOf(arrayDistancia[0]) % 1000)).split("\\.")[0]);
         }
     }
 }
