@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     android:background="#00004d"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -12,104 +11,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.tonapuc.MainActivity">
 
-    <Button
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="#6666ff"
-        android:onClick="Localizar"
-        android:text="Tô na PUC?"
+        android:gravity="top"
+        android:text="@string/toNaPuc"
+        android:textAlignment="center"
         android:textColor="#FFF"
-        android:textSize="30sp"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <LinearLayout
-        android:id="@+id/linear_latitude"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingTop="5dp"
-        android:visibility="gone">
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Latitude:"
-            android:textColor="#FFF"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/lbl_latitude"
+        <Button
+            android:id="@+id/button_local"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="3dp"
+            android:layout_height="60dp"
+            android:background="@drawable/roundcorner"
+            android:contentDescription="@string/botao"
+            android:onClick="buscarPeloLocal"
+            android:text="@string/peloLocal"
+            android:textAlignment="center"
             android:textColor="#FFF"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button_endereco"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/roundcorner"
+            android:contentDescription="@string/botao"
+            android:gravity="center"
+            android:onClick="buscarPeloEndereco"
+            android:text="@string/peloEndereco"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textSize="25sp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linear_longitude"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Longitude:"
-            android:textColor="#FFF"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/lbl_longitude"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="3dp"
-            android:textColor="#FFF"
-            android:textSize="30sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linear_distancia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Distância:"
-            android:textColor="#FFF"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/lbl_distancia"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="3dp"
-            android:textColor="#FFF"
-            android:textSize="30sp" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/lbl_status"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:paddingTop="5dp"
-        android:textAlignment="center"
-        android:textColor="#FFF"
-        android:textSize="40sp" />
 </LinearLayout>

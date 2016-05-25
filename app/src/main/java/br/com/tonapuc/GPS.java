@@ -14,7 +14,7 @@ import android.util.Log;
  * Criado por Jean Duarte em 16/05/2016.
  * Baseado no website: http://www.androidhive.info/2012/07/android-gps-location-manager-tutorial/
  */
-public class GPSTracker extends Service implements LocationListener {
+public class GPS extends Service implements LocationListener {
     private final Context mContext;
 
     // Status do GPS
@@ -35,7 +35,7 @@ public class GPSTracker extends Service implements LocationListener {
     // Declarando Location Manager
     protected LocationManager locationManager;
 
-    public GPSTracker(Context context) {
+    public GPS(Context context) {
         this.mContext = context;
         getLocation();
     }
@@ -77,8 +77,8 @@ public class GPSTracker extends Service implements LocationListener {
 
     @Override
     public void onLocationChanged(Location location) {
-        locationManager.removeUpdates(this);
-        locationManager = null;
+        getLocation();
+        Log.d("Location Changed", String.format("%s %s", getLatitude(), getLongitude()));
     }
 
     @Override

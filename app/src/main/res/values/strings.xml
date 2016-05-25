@@ -1,3 +1,18 @@
 <resources>
+    <string name="google_maps_api_key">AIzaSyDy7ZNho7NwPsiIQXiVsWMuqqViWo9U24M</string>
+
     <string name="app_name">Tô na PUC?</string>
+    <string name="toNaPuc">Tô na PUC?</string>
+    <string name="endereco">Endereço</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="distancia">Distância:</string>
+    <string name="botao">Botão</string>
+
+    <string name="peloEndereco">Buscar pelo endereço</string>
+    <string name="peloLocal">Buscar pelo local do dispositivo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
