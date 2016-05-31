@@ -1,5 +1,5 @@
 <resources>
-    <string name="google_maps_api_key">AIzaSyDy7ZNho7NwPsiIQXiVsWMuqqViWo9U24M</string>
+    <string name="google_maps_api_key">AIzaSyB3bznOeTko-8i1VjoyL_w852CYr-6IPfQ</string>
 
     <string name="app_name">Tô na PUC?</string>
     <string name="toNaPuc">Tô na PUC?</string>
@@ -8,6 +8,7 @@
     <string name="longitude">Longitude:</string>
     <string name="distancia">Distância:</string>
     <string name="botao">Botão</string>
+    <string name="meulocal">Meu Local</string>
 
     <string name="peloEndereco">Buscar pelo endereço</string>
     <string name="peloLocal">Buscar pelo local do dispositivo</string>
